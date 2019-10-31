@@ -1,0 +1,12 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+*.iml
+.gradle
+.idea
+/local.properties
+/build
+/captures
