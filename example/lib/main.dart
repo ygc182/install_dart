@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
     if (resultMap.containsKey(PermissionGroup.storage) &&
         resultMap[PermissionGroup.storage] == PermissionStatus.granted) {
       FlutterInstall.installApk(
-        "/storage/emulated/0/Android/data/com.baibao.xxbmm.test/files/xxbmm_1.0.apk",
+        "/storage/emulated/0/install/xxbmm_1.0.apk",
       ).then((result) {
         print("result: $result");
       });
