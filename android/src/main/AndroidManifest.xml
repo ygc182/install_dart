@@ -4,7 +4,7 @@
     <application>
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.xxbmm.flutter_install.fileprovider"
+            android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

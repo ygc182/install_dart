@@ -113,7 +113,7 @@ class FlutterInstallPlugin(private val mRegister: Registrar) : MethodCallHandler
         val intent = Intent(Intent.ACTION_VIEW)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        val uri: Uri = FileProvider.getUriForFile(context, "com.xxbmm.flutter_install.fileprovider", file)
+        val uri: Uri = FileProvider.getUriForFile(context, "${context.applicationContext.packageName}.fileProvider", file)
         intent.setDataAndType(uri, "application/vnd.android.package-archive")
         context.startActivity(intent)
     }
