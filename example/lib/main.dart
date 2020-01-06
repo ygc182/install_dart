@@ -15,7 +15,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-//    FlutterInstall.install({'filePath': "/storage/emulated/0/Android/data/com.baibao.xxbmm.test/files/xxbmm_1.0.apk", "appId": "com.baibao.xxbmm.test"}
   }
 
   @override
@@ -39,8 +38,8 @@ class _MyAppState extends State<MyApp> {
     ]);
     if (resultMap.containsKey(PermissionGroup.storage) &&
         resultMap[PermissionGroup.storage] == PermissionStatus.granted) {
-      FlutterInstall.installApk(
-        "/storage/emulated/0/install/xxbmm_1.0.apk",
+      FlutterInstall.updateApk(
+        "https://f.meishi.51baibao.com/mt/e07f374c-0aa9-11ea-b032-0242ac1e0002/xxbmm--v1.8.0-4.apk",
       ).then((result) {
         print("result: $result");
       });

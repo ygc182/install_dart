@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 class FlutterInstall {
   static const MethodChannel _channel = const MethodChannel('install_plugin');
 
-  /// for Android: install apk by its file absolute path
-  static Future<String> installApk(filePath) async {
-    Map<String, dynamic> params = {"filePath": filePath};
-    return await _channel.invokeMethod('installApk', params);
+  /// for Android: update apk
+  static Future<String> updateApk(filePath) async {
+    Map<String, dynamic> params = {"url": filePath};
+    return await _channel.invokeMethod('downloadApk', params);
   }
 
   /// for iOS: check update
