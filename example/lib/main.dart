@@ -32,19 +32,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   void checkToInstall() async {
-    Map<PermissionGroup, PermissionStatus> resultMap =
-    await PermissionHandler().requestPermissions(<PermissionGroup>[
-      PermissionGroup.storage,
-    ]);
-    if (resultMap.containsKey(PermissionGroup.storage) &&
-        resultMap[PermissionGroup.storage] == PermissionStatus.granted) {
+    if (await Permission.storage.request().isGranted) {
       FlutterInstall.updateApk(
         "https://f.meishi.51baibao.com/mt/e07f374c-0aa9-11ea-b032-0242ac1e0002/xxbmm--v1.8.0-4.apk",
       ).then((result) {
         print("result: $result");
       });
-    } else {
-      print("storage permisson denied");
     }
   }
 
