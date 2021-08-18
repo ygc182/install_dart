@@ -30,13 +30,17 @@ class FlutterInstallPlugin : MethodCallHandler, FlutterPlugin {
     override fun onMethodCall(call: MethodCall, result: Result) {
         if (call.method == "downloadApk") {
             val url = call.argument<String>("url")
+            var title = call.argument<String>("title")
 
             if (url == null) {
                 result.error("NullPointerException", "url is null", null)
                 return
             }
+            if (title == null) {
+                title = "安装包"
+            }
             try {
-                downloadApk("小小包麻麻", url)
+                downloadApk(title, url)
             } catch (e: Throwable) {
                 result.error(e.javaClass.simpleName, e.message, null)
             }

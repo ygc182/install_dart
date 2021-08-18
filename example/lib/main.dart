@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
     if (await Permission.storage.request().isGranted) {
       FlutterInstall.updateApk(
         "https://f.meishi.51baibao.com/mt/e07f374c-0aa9-11ea-b032-0242ac1e0002/xxbmm--v1.8.0-4.apk",
+        '测试名称'
       ).then((result) {
         print("result: $result");
       });

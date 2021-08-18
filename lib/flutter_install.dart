@@ -6,8 +6,8 @@ class FlutterInstall {
   static const MethodChannel _channel = const MethodChannel('install_plugin');
 
   /// for Android: update apk
-  static Future<String> updateApk(filePath) async {
-    Map<String, dynamic> params = {"url": filePath};
+  static Future<String> updateApk(url, title) async {
+    Map<String, dynamic> params = {'url': url, 'title': title};
     return await _channel.invokeMethod('downloadApk', params);
   }
 

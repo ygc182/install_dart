@@ -7,7 +7,7 @@ class DownloadBean {
     }
 
     var downloadId = 0L
-    var title: String = "小小包麻麻"
+    var title: String = ""
     var downloadType : String = TYPE_APK
     var needInstall : Boolean = false
 }
