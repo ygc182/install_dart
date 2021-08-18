@@ -12,8 +12,7 @@ class FlutterInstall {
   }
 
   /// for iOS: check update
-  static Future<String> update(String url) async{
-    Map<String, dynamic> params = {"url": url};
-    return await _channel.invokeMethod("update", params);
+  static Future<String> update(String url) async {
+    return await _channel.invokeMethod("update", url);
   }
 }

@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - flutter_install (0.0.1):
     - Flutter
-  - permission_handler (3.3.0):
+  - "permission_handler (5.1.0+2)":
     - Flutter
 
 DEPENDENCIES:
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  flutter_install: 4a87eb3c2fc8115c40ac54da2a41e0a7427155e8
-  permission_handler: 67637977b227d62d46bfbf524f335f8568de5a73
+  flutter_install: 53d027c2a23040781232b6bdeb7b36d308fdd6a2
+  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
