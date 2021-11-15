@@ -47,14 +47,14 @@
     if (@available(iOS 10.0, *)) {
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
             if (success) {
-                result(@(1));
+                result(@"1");
             } else {
                 result([FlutterError errorWithCode:@"-4" message:@"Open Url 失败" details:[NSString stringWithFormat:@"URL String: %@", url.absoluteString]]);
             }
         }];
     } else {
         if ([[UIApplication sharedApplication] openURL:url]) {
-            result(@(1));
+            result(@"1");
         } else {
             result([FlutterError errorWithCode:@"-4" message:@"Open Url 失败" details:[NSString stringWithFormat:@"URL String: %@", url.absoluteString]]);
         }
