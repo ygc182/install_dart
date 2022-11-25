@@ -15,7 +15,8 @@
                 android:resource="@xml/provider_install_paths"/>
         </provider>
 
-        <receiver android:name=".downloader.DownLoaderBroadcastReceiver">
+        <receiver android:name=".downloader.DownLoaderBroadcastReceiver"
+                  android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
             </intent-filter>
