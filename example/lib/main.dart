@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('FlutterInstallPlugin example app'),
         ),
         body: Center(
-          child: FlatButton(onPressed: update, child: Text('install')),
+          child: TextButton(onPressed: update, child: Text('install')),
         ),
       ),
     );
